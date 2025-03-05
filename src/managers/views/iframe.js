@@ -11,7 +11,7 @@ import {
     bounds,
     defer,
     createBlobUrl,
-    revokeBlobUrl,
+    revokeBlobUrl
 } from "../../utils/core";
 import EpubCFI from "../../epubcfi";
 import Contents from "../../contents";
@@ -32,7 +32,7 @@ class IframeView {
                 method: undefined,
                 forceRight: false,
                 allowScriptedContent: false,
-                allowPopups: false,
+                allowPopups: false
             },
             options || {}
         );
@@ -388,7 +388,7 @@ class IframeView {
             width: width,
             height: height,
             widthDelta: widthDelta,
-            heightDelta: heightDelta,
+            heightDelta: heightDelta
         };
 
         this.pane && this.pane.render();
@@ -586,7 +586,7 @@ class IframeView {
     offset() {
         return {
             top: this.element.offsetTop,
-            left: this.element.offsetLeft,
+            left: this.element.offsetLeft
         };
     }
 
@@ -611,7 +611,7 @@ class IframeView {
 
         return {
             left: targetPos.left,
-            top: targetPos.top,
+            top: targetPos.top
         };
     }
 
@@ -640,7 +640,7 @@ class IframeView {
             {
                 fill: "yellow",
                 "fill-opacity": "1",
-                "mix-blend-mode": "multiply",
+                "mix-blend-mode": "multiply"
             },
             styles
         );
@@ -662,7 +662,7 @@ class IframeView {
         this.highlights[cfiRange] = {
             mark: h,
             element: h.element,
-            listeners: [emitter, cb],
+            listeners: [emitter, cb]
         };
 
         h.element.setAttribute("ref", className);
@@ -690,7 +690,7 @@ class IframeView {
             let indicatorGroup = document.createElementNS(svgNS, "g");
             indicatorGroup.setAttribute("class", "notes-group");
             indicatorGroup.setAttribute("fill-opacity", "1");
-            indicatorGroup.setAttribute("display", "block"); // Starts hidden
+            indicatorGroup.setAttribute("display", "none"); // Starts hidden
 
             // Create the 10x10 rectangle for the badge with a border radius of 2
             let indicatorRect = document.createElementNS(svgNS, "rect");
@@ -759,7 +759,7 @@ class IframeView {
             {
                 stroke: "black",
                 "stroke-opacity": "0.3",
-                "mix-blend-mode": "multiply",
+                "mix-blend-mode": "multiply"
             },
             styles
         );
@@ -780,7 +780,7 @@ class IframeView {
         this.underlines[cfiRange] = {
             mark: h,
             element: h.element,
-            listeners: [emitter, cb],
+            listeners: [emitter, cb]
         };
 
         h.element.setAttribute("ref", className);
@@ -852,7 +852,7 @@ class IframeView {
         this.marks[cfiRange] = {
             element: mark,
             range: range,
-            listeners: [emitter, cb],
+            listeners: [emitter, cb]
         };
 
         return parent;
